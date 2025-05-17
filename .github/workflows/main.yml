@@ -48,7 +48,7 @@ jobs:
       # Initialize the database with schema
       
       - name: Load schema
-        run: mysql -h127.0.0.1 -uroot -p1111 ecommerce_db < schema.sql
+        run: mysql -h127.0.0.1 -uroot -p1111 nor_db < schema.sql
 
           
       # Run tests
