@@ -46,9 +46,10 @@ jobs:
           pip install -r requirements.txt
           
       # Initialize the database with schema
-      - name: Initialize Database
-        run: |
-          - run: mysql -h127.0.0.1 -uroot -p1111 ecommerce_db < schema.sql
+      
+      - name: Load schema
+        run: mysql -h127.0.0.1 -uroot -p1111 ecommerce_db < schema.sql
+
           
       # Run tests
       - name: Run tests
